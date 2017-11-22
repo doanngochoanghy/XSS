@@ -1,2 +1,2 @@
-# XSS
-Tao trang web chat bi loi XSS
+﻿# SQL-Injection
+Website quản lý tin tức bị lỗi SQL Injection
