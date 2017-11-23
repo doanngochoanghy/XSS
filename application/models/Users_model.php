@@ -20,6 +20,17 @@ class Users_model extends CI_Model {
 		$this->db->flush_cache();	
 		return $this->db->insert('users', $data);
 	}
+	public function check_username($username)
+	{
+		$this->db->flush_cache();
+		$this->db->select('user_id,username,is_admin');
+		$query=$this->db->get_where('users',array('username' =>$username));
+		if (!empty($query->row_array())) {
+			return $query->row(0);
+		} else {
+			return false;
+		}
+	}
 }
 	/* End of file Users_model.php */
 /* Location: ./application/models/Users_model.php */

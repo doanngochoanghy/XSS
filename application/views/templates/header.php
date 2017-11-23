@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Web002</title>
+	<title>Web003</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.css">
 
 </head>
@@ -20,9 +20,9 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="<?php echo base_url(); ?>News">News</a></li>
-          <?php if (!empty($this->session->userdata('is_admin'))&&$this->session->userdata('is_admin')==1): ?>
-            <li><a href="<?php echo base_url();?>News/Create">Create</a></li>
+          <li><a href="<?php echo base_url(); ?>Message">Message</a></li>
+          <?php if($this->session->userdata('loggedin')): ?>
+            <li><a href="<?php echo base_url();?>Message/send_message">Send</a></li>
           <?php endif;?>
         </ul>
         <?php if(!$this->session->userdata('loggedin')): ?>
