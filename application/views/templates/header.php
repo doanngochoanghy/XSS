@@ -3,7 +3,12 @@
 <head>
 	<title>Web003</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.css">
-
+<style type="text/css">
+  div p
+  {
+    font-size: 20px
+  }
+</style>
 </head>
 <body>
   <nav class="navbar navbar-inverse">

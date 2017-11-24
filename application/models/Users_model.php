@@ -9,7 +9,7 @@ class Users_model extends CI_Model {
 		$this->db->select('user_id,username,is_admin');
 		$query=$this->db->get_where('users',array('username' =>$username ,'password'=>$password ));
 		if (!empty($query->row_array())) {
-			return $query->row(0);
+			return $query->row_array(0);
 		} else {
 			return false;
 		}
@@ -26,7 +26,7 @@ class Users_model extends CI_Model {
 		$this->db->select('user_id,username,is_admin');
 		$query=$this->db->get_where('users',array('username' =>$username));
 		if (!empty($query->row_array())) {
-			return $query->row(0);
+			return $query->row_array();
 		} else {
 			return false;
 		}

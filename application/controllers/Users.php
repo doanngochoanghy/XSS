@@ -32,6 +32,9 @@ class Users extends CI_Controller {
 					$user_data=(array)$user_data;
 					$user_data["loggedin"] = true;
 					$this->session->set_userdata($user_data);
+					if ($this->session->userdata('is_admin')) {
+						$this->input->set_cookie('flag', '1234567890','3600');						
+					}
 					$this->session->set_flashdata('message', 'Welcome <b>'.$this->session->userdata('username').'</b>. You are logged in.');
 					redirect(base_url(),'');
 				} else {
@@ -44,6 +47,7 @@ class Users extends CI_Controller {
 	public function logout()
 	{
 		$this->session->sess_destroy();
+		delete_cookie('flag');
 		redirect(base_url(),'');
 	}
 	public function register()

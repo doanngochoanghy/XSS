@@ -13,7 +13,7 @@
 		</div>
 		<div class="form-group">
 			<label>Content</label>
-			<input type="text" class="form-control" name="content" placeholder="Write message here" value="" required="">
+			<input type="text" class="form-control" name="message" placeholder="Write message here" value="" required="">
 		</div>
 		<div class="form-group">
 			<div class="col-md-12 col-md-offset-0">
