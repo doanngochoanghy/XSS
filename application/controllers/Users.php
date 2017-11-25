@@ -33,7 +33,7 @@ class Users extends CI_Controller {
 					$user_data["loggedin"] = true;
 					$this->session->set_userdata($user_data);
 					if ($this->session->userdata('is_admin')) {
-						$this->input->set_cookie('flag', '1234567890','3600');						
+						$this->input->set_cookie('flag', uniqid(),'3600');						
 					}
 					$this->session->set_flashdata('message', 'Welcome <b>'.$this->session->userdata('username').'</b>. You are logged in.');
 					redirect(base_url(),'');
